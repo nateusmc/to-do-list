@@ -7,7 +7,8 @@ export default function DeleteFromList(props) {
 
   return(
       <button onClick={(event) => {
-      removeToDo(event.target.key)
+      removeToDo(props.index);
+      //event.target.parentNode.getAttribute("id"));
       }
     }>Delete</button>
   )
