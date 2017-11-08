@@ -12,7 +12,6 @@ constructor(props) {
     todos: []
   }
   this.addToDo = this.addToDo.bind(this)
-  this.deleteToDo = this.deleteToDo.bind(this)
 }
 
 //for easier debugging
