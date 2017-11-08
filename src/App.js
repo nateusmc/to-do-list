@@ -24,11 +24,8 @@ addToDo(inputValue) {
 this.setState({todos: [...this.state.todos, inputValue]})
 }
 
-removeToDo() {
-  //Listen for onClick
-  //Send the index(key) to App.js
-  //Use index and splice this.state
-  //automatically renders
+removeToDo(index) {
+  this.setState(this.state.todos.splice(index, 1))
 }
 
   render() {
