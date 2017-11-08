@@ -2,7 +2,13 @@ import React from 'react'
 import './DeleteFromList.css'
 
 export default function DeleteFromList(props) {
+
+  const removeToDo = props.removeToDo;
+
   return(
-    console.log('test text')
+      <button onClick={(event) => {
+      removeToDo(event.target.key)
+      }
+    }>Delete</button>
   )
 }
