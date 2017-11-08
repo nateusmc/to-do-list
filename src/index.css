@@ -2,4 +2,32 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: rgb(15, 68, 112)
+}
+
+button {
+  width: 200px;
+  height: 30px;
+  font-size: 1.1em; 
+  color: rgb(255, 255, 255);
+  background-color: rgb(69, 167, 182);
+  box-shadow: none;
+  text-shadow: none;
+  border:none;
+  border-radius: 2px;  
+  box-shadow:none;
+  margin: 20px;
+}
+
+label {
+  color: white;
+}
+
+input {
+  margin: 10px;
+  box-shadow: none;
+  text-shadow: none;
+  border:none;
+  border-radius: 2px;  
+  box-shadow:none
 }
