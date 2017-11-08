@@ -1,2 +1,2 @@
 import React from 'react'
-import './List.css'
+import './Title.css'
