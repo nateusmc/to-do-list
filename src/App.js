@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AddToList from './components/AddToList'
+import Title from './components/Title'
+import List from './components/List'
 
 class App extends Component {
-constructor() {
-  super()
+constructor(props) {
+  super(props)
 
   this.state = {
     todos: []
@@ -13,20 +15,21 @@ constructor() {
   this.deleteToDo = this.deleteToDo.bind(this)
 }
 
-addToDo() {
-
+//for easier debugging
+componentDidMount() {
+  console.log('inputValue')
 }
 
-deleteToDo() {
-
+addToDo(inputValue) {
+this.setState({todos: [...this.state.todos, inputValue]})
 }
 
   render() {
     return (
       <div className="App">
         <Title />
-        <AddToList addtolist={this.addToDo}/>
-        <List />
+        <AddToList addToList={this.addToDo}/>
+        <List listOfToDo={this.state.todos}/>
       </div>
     );
   }
