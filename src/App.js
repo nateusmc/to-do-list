@@ -12,6 +12,7 @@ constructor(props) {
     todos: []
   }
   this.addToDo = this.addToDo.bind(this)
+  this.removeToDo = this.removeToDo.bind(this)
 }
 
 //for easier debugging
@@ -23,12 +24,19 @@ addToDo(inputValue) {
 this.setState({todos: [...this.state.todos, inputValue]})
 }
 
+removeToDo() {
+  //Listen for onClick
+  //Send the index(key) to App.js
+  //Use index and splice this.state
+  //automatically renders
+}
+
   render() {
     return (
       <div className="App">
         <Title />
         <AddToList addToList={this.addToDo}/>
-        <List listOfToDo={this.state.todos}/>
+        <List listOfToDo={this.state.todos} removeToDo={this.removeToDo}/>
       </div>
     );
   }
